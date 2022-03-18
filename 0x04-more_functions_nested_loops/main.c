@@ -1,20 +1,14 @@
-#include "main.h"
 #include <stdio.h>
-
-/**
- * _isupper - checks if upper
- *
- * @c: character
- *
- * Description: checks if uppercase
- * Return: Always 0.
- */
-
-int _isupper(int c)
+#include <ctype.h>
+int main()
 {
-	if (c > 64 && c < 91)
-	{
-		return (1);
-	}
-	return (0);
+    char c;
+
+    c = 'C';
+    printf("Return value when uppercase character %c is passed to isupper(): %d", c, isupper(c));
+
+    c = '+';
+    printf("\nReturn value when another character %c is passed to is isupper(): %d", c, isupper(c));
+
+   return 0;
 }
