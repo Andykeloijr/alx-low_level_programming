@@ -1,15 +1,22 @@
 #include "main.h"
-
 /**
- * main - check the code
+ * _puts - prints a string
  *
- * Return: Always 0.
+ * @str: pointer to a character array
+ *
+ * Description: prints a string
+ * Return: nothing
  */
-int main(void)
-{
-    char *str;
 
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    _puts(str);
-    return (0);
+void _puts(char *str)
+{
+	int index = 0;
+
+	while (str[index] != '\0')
+	{
+		putchar(str[index]);
+		index++;
+	}
+	putchar('\n');
+
 }
