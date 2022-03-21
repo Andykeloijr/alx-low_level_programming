@@ -1,7 +1,6 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * _strlen - returns the length of string
+ * _strlen - returns the length
  * @s: string s
  * Return: length of string
  */
@@ -11,25 +10,30 @@ int _strlen(char *s)
 	int len = 0;
 
 	while (*s)
-	{
+{
 		s++;
 		len++;
-	}
+}
 	return (len);
 }
 
 /**
- * puts2 - prints one char out of 2 of a string
- *
- * @str: string str
+ * rev_string - reverses a string
+ * @s: string s
  */
-void puts2(char *str)
+void rev_string(char *s)
 {
-	int x;
-	int size = _strlen(str);
+	int len1 = _strlen(s);
+	int counter = 0;
+	char tmp;
 
-	for (x = 0; x < size; x += 2)
-		_putchar(*(str + x));
+	while (counter < len1 / 2)
+	{
+		tmp = *(s + counter);
+		*(s + counter) = *(s + len1 - 1 - counter);
+		*(s + len1 - 1 - counter) = tmp;
+		counter++;
+	}
 
-	_putchar('\n');
 }
+
