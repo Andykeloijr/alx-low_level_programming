@@ -1,20 +1,17 @@
 #include "main.h"
 
 /**
- * print_chessboard - prints chessboard.
- * @a: matrix
-*/
-
+ * print_chessboard - prints the chessboard
+ * @a: pointer to chessboard
+ */
 void print_chessboard(char (*a)[8])
 {
 	int i, j;
 
-	for (i = 0; i < 8; i++)
+	for (j = 0; j < 8; j++)
 	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(*(*(i + a) + j));
-		}
-	_putchar('\n');
+		for (i = 0; i < 8; i++)
+			_putchar(a[j][i]);
+		_putchar('\n');
 	}
 }
